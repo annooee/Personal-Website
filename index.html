@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Annie Yu</title>
+    <meta name="description" content="Annie Yu — developer building agentic AI, knowledge graphs and ML systems. CS @ Western, HBA @ Ivey." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:ital,opsz,wght@1,9..144,400..600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="is-loading">
+    <!-- ───────────── Intro loader ───────────── -->
+    <div class="loader">
+      <button class="loader__skip" type="button">Skip intro →</button>
+      <div class="loader__pill" aria-hidden="true">
+        <span class="loader__caption" id="caption">initialising</span>
+        <span class="loader__bar"><i></i></span>
+        <span class="loader__count"><span id="count">0</span>%</span>
+      </div>
+    </div>
+
+    <!-- Vanta fog lives here -->
+    <div id="fog" aria-hidden="true"></div>
+    <canvas id="graph" aria-hidden="true"></canvas>
+
+    <!-- ───────────── Nav ───────────── -->
+    <header class="nav">
+      <a href="#top" data-to class="nav__logo"><span class="nav__dot"></span>Annie Yu</a>
+      <nav class="nav__links">
+        <a href="#about" data-to>About</a>
+        <a href="#work" data-to>Experience</a>
+        <a href="#projects" data-to>Projects</a>
+        <a href="#contact" data-to class="nav__cta">Say hi <span>↗</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ───────────── Hero ───────────── -->
+      <section class="hero" id="top">
+        <h1 class="sr-only">Annie Yu</h1>
+        <div class="hero__meta">
+          <p class="hero__role">
+            Hi! I build <em>friendly</em> AI — agents, knowledge graphs &amp; machine-learning systems.
+          </p>
+          <p class="hero__scroll"><span>scroll</span><i></i></p>
+          <p class="hero__right">
+            <span class="chip">3 terms at IBM</span>
+            <span class="chip">CS @ Western · HBA @ Ivey</span>
+          </p>
+        </div>
+      </section>
+
+      <div class="veil">
+      <!-- ───────────── About ───────────── -->
+      <section class="section about" id="about">
+        <p class="label"><span>01</span> About</p>
+        <div class="about__grid">
+          <p class="about__statement">
+            I build AI systems that <em>remember</em> — multi-agent pipelines, knowledge graphs, and the models in
+            between. I study Computer Science at Western and business at Ivey, and I love building tools that people
+            <em>actually</em> use.
+          </p>
+          <dl class="stats">
+            <div class="stat reveal"><dt><span data-count="3.8" data-dec="1">3.8</span></dt><dd>GPA · Western CS</dd></div>
+            <div class="stat reveal"><dt><span data-count="3">3</span></dt><dd>Terms at IBM</dd></div>
+            <div class="stat reveal"><dt><span data-count="70">70</span>%</dt><dd>Faster error diagnosis with GraphRAG agents</dd></div>
+          </dl>
+        </div>
+
+        <div class="facts">
+          <div class="fact glass tilt reveal">
+            <h3>Education</h3>
+            <p><strong>Western University</strong><br />HBSc Computer Science · GPA 3.8<br />2022 — 2028</p>
+            <p><strong>Ivey Business School</strong><br />HBA, combined degree<br />2025 — 2027</p>
+          </div>
+          <div class="fact glass tilt reveal">
+            <h3>Leadership</h3>
+            <p>VP of Projects, <strong>Western Founders Network</strong></p>
+            <p>Co-Captain, Ultimate intramural team</p>
+            <p>Ivey Tech Club · Ivey Product Society</p>
+          </div>
+          <div class="fact glass tilt reveal">
+            <h3>Recognition</h3>
+            <p>Western Scholarship of Distinction</p>
+            <p>Dean’s Honor List</p>
+            <p><strong>North America Cup winner</strong> — Team Canada, Golf</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── Experience ───────────── -->
+      <section class="section work" id="work">
+        <p class="label"><span>02</span> Experience</p>
+
+        <article class="job reveal">
+          <p class="job__date">May — Aug 2026</p>
+          <div>
+            <h3 class="job__co">IBM <span class="job__tag">Term 3</span></h3>
+            <p class="job__role">Application Developer Intern</p>
+          </div>
+          <ul>
+            <li>Built a multi-agent UI-to-code pipeline on Microsoft Agent Framework with persistent <strong>Cognee/Neo4j</strong> memory, raising component-match accuracy by <strong>40%</strong>.</li>
+            <li>Designed and presented a graph-database POC to a client, cutting manual lookup time by <strong>60%</strong>.</li>
+            <li>Benchmarked LLM &amp; embedding providers and designed a <strong>7-stage</strong> schema to scope agent memory retrieval.</li>
+          </ul>
+        </article>
+
+        <article class="job reveal">
+          <p class="job__date">May — Aug 2025</p>
+          <div>
+            <h3 class="job__co">IBM <span class="job__tag">Term 2</span></h3>
+            <p class="job__role">Application Developer Intern</p>
+          </div>
+          <ul>
+            <li>Developed agentic tools combining <strong>Neo4j GraphRAG</strong> and <strong>Claude 3.7 Sonnet</strong> for error diagnosis, cutting developer response times by <strong>70%</strong>.</li>
+            <li>Evaluated RAG architectures &amp; agent frameworks; built Storybook UIs for agent reasoning.</li>
+            <li>Architected a Crawl4AI/Puppeteer pipeline extracting <strong>10K+</strong> material specs for a shipbuilding client.</li>
+          </ul>
+        </article>
+
+        <article class="job reveal">
+          <p class="job__date">Sep — Dec 2024</p>
+          <div>
+            <h3 class="job__co">IBM <span class="job__tag">Term 1</span></h3>
+            <p class="job__role">Developer Intern</p>
+          </div>
+          <ul>
+            <li>Engineered validation rules for an anomaly-detection engine verifying <strong>$10B</strong> in insurance claims on Azure Synapse.</li>
+            <li>Ran parallel QA on two validation engines, resolving discrepancies across <strong>50M+</strong> rows.</li>
+          </ul>
+        </article>
+
+        <article class="job reveal">
+          <p class="job__date">Feb 2023 — Jul 2024</p>
+          <div>
+            <h3 class="job__co">TMU</h3>
+            <p class="job__role">ML Research Assistant · Dept. of Mathematics</p>
+          </div>
+          <ul>
+            <li>Developed RL <strong>market-making agents</strong> (DDPG, DQN) that learn Bitcoin bid/ask quoting strategies.</li>
+            <li>Built a custom trading environment on <strong>25-level limit order book</strong> data; actor-critic networks in PyTorch &amp; TensorFlow.</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- ───────────── Projects (horizontal, pinned) ───────────── -->
+      <section class="hscroll" id="projects">
+        <div class="hscroll__pin">
+          <div class="hscroll__head">
+            <div>
+              <p class="label"><span>03</span> Selected projects</p>
+              <h2 class="hscroll__title">Things I’ve <em>built</em></h2>
+            </div>
+            <div class="hscroll__meter"><i></i></div>
+          </div>
+
+          <div class="track">
+            <article class="card glass tilt c1">
+              <div class="card__top"><span class="card__orb"></span><span class="chip">Computer vision</span></div>
+              <div class="card__metric">92%<p>crowd counting accuracy · 15 FPS</p></div>
+              <div class="card__body">
+                <h3>Crowd Watch</h3>
+                <p class="card__lede">Real-time crowd density, from the sky.</p>
+                <p>CSRNet with a VGG16 backbone and dilated convolutions on DJI drone &amp; webcam feeds — density heatmaps for 10K+ person crowds, alerting above 5 people/m².</p>
+                <ul class="tags"><li>PyTorch</li><li>CSRNet</li><li>OpenCV</li><li>DJI Drone</li></ul>
+              </div>
+            </article>
+
+            <article class="card glass tilt c2">
+              <div class="card__top"><span class="card__orb"></span><span class="chip">Wearable · LLM</span></div>
+              <div class="card__metric">Live<p>scene mood → playlist</p></div>
+              <div class="card__body">
+                <h3>Mookie</h3>
+                <p class="card__lede">A wearable that picks your soundtrack.</p>
+                <p>A Raspberry Pi Zero 2 camera streams snapshots to Flask, where a locally hosted Llama 3.2 Vision model reads the mood of the scene; a LangChain pipeline curates live Spotify playlists.</p>
+                <ul class="tags"><li>LangChain</li><li>Ollama</li><li>Llama 3.2 Vision</li><li>Spotify API</li></ul>
+              </div>
+            </article>
+
+            <article class="card glass tilt c3">
+              <div class="card__top"><span class="card__orb"></span><span class="chip">IoT · Full-stack</span></div>
+              <div class="card__metric">500+<p>students during exams</p></div>
+              <div class="card__body">
+                <h3>Room Finder</h3>
+                <p class="card__lede">Find an empty study room, instantly.</p>
+                <p>Arduino sensors across 30+ rooms with 95% detection accuracy, occupancy probabilities computed from 10K+ records, and a PostgreSQL + REST backend feeding live React visualizations.</p>
+                <ul class="tags"><li>React</li><li>PostgreSQL</li><li>Arduino</li><li>REST</li></ul>
+              </div>
+            </article>
+
+            <a class="card card--more tilt" href="https://github.com/annooee" target="_blank" rel="noopener">
+              <div class="card__top"><span class="card__orb"></span><span class="chip">Archive</span></div>
+              <div class="card__metric">More<p>on GitHub</p></div>
+              <div class="card__body">
+                <h3>@annooee <span class="arrow">↗</span></h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── Skills marquee ───────────── -->
+      <section class="skills">
+        <div class="marquee" data-dir="-1">
+          <div class="marquee__inner">
+            <span>Python</span><i></i><span>PyTorch</span><i></i><span>Neo4j GraphRAG</span><i></i><span>LangChain</span><i></i><span>Azure OpenAI</span><i></i><span>React</span><i></i><span>SQL</span><i></i>
+          </div>
+        </div>
+        <div class="marquee marquee--grad" data-dir="1">
+          <div class="marquee__inner">
+            <span>Agent Framework</span><i></i><span>Cognee</span><i></i><span>TensorFlow</span><i></i><span>Ollama</span><i></i><span>AWS Bedrock</span><i></i><span>Docker</span><i></i>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="glass tilt reveal"><h3>Languages</h3><p>Python, Java, SQL, JavaScript, C, R, HTML/CSS</p></div>
+          <div class="glass tilt reveal"><h3>Frameworks</h3><p>React, Node.js, Flask, PyTorch, TensorFlow, Stable Baselines3, LangChain, Pandas, NumPy, OpenCV</p></div>
+          <div class="glass tilt reveal"><h3>AI &amp; Data</h3><p>Microsoft Agent Framework, Cognee, Neo4j (GraphRAG), AWS Bedrock, Azure OpenAI, Ollama, Azure Synapse</p></div>
+          <div class="glass tilt reveal"><h3>Tools</h3><p>PostgreSQL, Docker, Storybook, Power BI, Puppeteer, Crawl4AI, Raspberry Pi, Arduino</p></div>
+        </div>
+      </section>
+
+      </div>
+
+      <!-- ───────────── Contact (fog shows through) ───────────── -->
+      <footer class="section contact" id="contact">
+        <p class="label"><span>04</span> Contact</p>
+        <div>
+          <h2 class="contact__big">Let’s make something<br /><em>fun</em> together.</h2>
+          <a class="contact__mail" href="mailto:22annieyu@gmail.com">22annieyu@gmail.com <span>↗</span></a>
+        </div>
+        <div class="contact__bottom">
+          <nav class="contact__links">
+            <a href="https://linkedin.com/in/annie-yu22" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/annooee" target="_blank" rel="noopener">GitHub</a>
+            <a href="/resume.pdf" target="_blank" rel="noopener">Résumé</a>
+          </nav>
+          <p>Toronto · <span id="clock">--:--</span></p>
+          <p>© 2026 Annie Yu · scroll by Lenis · fog by Vanta</p>
+        </div>
+      </footer>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
